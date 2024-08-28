@@ -1,0 +1,18 @@
+[gd_scene load_steps=4 format=3 uid="uid://biuqj5xnug0f2"]
+
+[ext_resource type="Texture2D" uid="uid://bvjq3ja8c65f0" path="res://Terrain/Water/Water.png" id="1_82ode"]
+
+[sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_2icb2"]
+resource_name = "Water"
+texture = ExtResource("1_82ode")
+texture_region_size = Vector2i(64, 64)
+0:0/0 = 0
+
+[sub_resource type="TileSet" id="TileSet_3airx"]
+tile_size = Vector2i(64, 64)
+sources/0 = SubResource("TileSetAtlasSource_2icb2")
+
+[node name="TerrainManager" type="Node2D"]
+
+[node name="Water" type="TileMapLayer" parent="."]
+tile_set = SubResource("TileSet_3airx")
